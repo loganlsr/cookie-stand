@@ -6,7 +6,8 @@ var pike = {
   max: 65,
   avg: 6.3,
   hourlyCust: [],
-  hourlySales: []
+  hourlySales: [],
+  total: 0
 };
 
 pike.generateRandomNum = function (min, max) {
@@ -21,6 +22,7 @@ pike.calculateHourlySales = function (hourlyCust, avg) {
   for (var i = 0; i < hourlyCust.length; i++) {
     var saleHour = Math.floor(hourlyCust[i] * avg);
     pike.hourlySales.push(saleHour);
+    pike.total += saleHour;
   };
 };
 pike.calculateHourlySales(pike.hourlyCust, pike.avg);
@@ -29,9 +31,12 @@ pike.listHours = function () {
   var pikeInfo = document.getElementById('pikeInfo');
   for (var i = 0; i < pike.hourlyCust.length; i++) {
     var listItem = document.createElement('li');
-    listItem.textContent = hours[i] + ' Customers - ' + pike.hourlyCust[i] + ' Sales - ' + pike.hourlySales[i];
+    listItem.textContent = hours[i] + ' Sales - ' + pike.hourlySales[i];
     pikeInfo.appendChild(listItem);
   };
+  var total = document.createElement('ul');
+  total.textContent = 'Total - ' + pike.total;
+  pikeInfo.appendChild(total);
 };
 pike.listHours();
 
@@ -40,7 +45,8 @@ var seatac = {
   max: 24,
   avg: 1.2,
   hourlyCust: [],
-  hourlySales: []
+  hourlySales: [],
+  total: 0
 };
 
 seatac.generateRandomNum = function (min, max) {
@@ -55,6 +61,7 @@ seatac.calculateHourlySales = function (hourlyCust, avg) {
   for (var i = 0; i < hourlyCust.length; i++) {
     var saleHour = Math.floor(hourlyCust[i] * avg);
     seatac.hourlySales.push(saleHour);
+    seatac.total += saleHour;
   };
 };
 seatac.calculateHourlySales(seatac.hourlyCust, seatac.avg);
@@ -63,9 +70,12 @@ seatac.listHours = function () {
   var seatacInfo = document.getElementById('seatacInfo');
   for (var i = 0; i < seatac.hourlyCust.length; i++) {
     var listItem = document.createElement('li');
-    listItem.textContent = hours[i] + ' Customers - ' + seatac.hourlyCust[i] + ' Sales - ' + seatac.hourlySales[i];
+    listItem.textContent = hours[i] + ' Sales - ' + seatac.hourlySales[i];
     seatacInfo.appendChild(listItem);
   };
+  var total = document.createElement('ul');
+  total.textContent = 'Total - ' + seatac.total;
+  seatacInfo.appendChild(total);
 };
 seatac.listHours();
 
@@ -74,7 +84,8 @@ var center = {
   max: 38,
   avg: 3.7,
   hourlyCust: [],
-  hourlySales: []
+  hourlySales: [],
+  total: 0
 };
 
 center.generateRandomNum = function (min, max) {
@@ -89,6 +100,7 @@ center.calculateHourlySales = function (hourlyCust, avg) {
   for (var i = 0; i < hourlyCust.length; i++) {
     var saleHour = Math.floor(hourlyCust[i] * avg);
     center.hourlySales.push(saleHour);
+    center.total += saleHour;
   };
 };
 center.calculateHourlySales(center.hourlyCust, center.avg);
@@ -97,9 +109,12 @@ center.listHours = function () {
   var centerInfo = document.getElementById('centerInfo');
   for (var i = 0; i < center.hourlyCust.length; i++) {
     var listItem = document.createElement('li');
-    listItem.textContent = hours[i] + ' Customers - ' + center.hourlyCust[i] + ' Sales - ' + center.hourlySales[i];
+    listItem.textContent = hours[i] + ' Sales - ' + center.hourlySales[i];
     centerInfo.appendChild(listItem);
   };
+  var total = document.createElement('ul');
+  total.textContent = 'Total - ' + center.total;
+  centerInfo.appendChild(total);
 };
 center.listHours();
 
@@ -108,7 +123,8 @@ var capHill = {
   max: 38,
   avg: 2.3,
   hourlyCust: [],
-  hourlySales: []
+  hourlySales: [],
+  total: 0
 };
 
 capHill.generateRandomNum = function (min, max) {
@@ -123,6 +139,7 @@ capHill.calculateHourlySales = function (hourlyCust, avg) {
   for (var i = 0; i < hourlyCust.length; i++) {
     var saleHour = Math.floor(hourlyCust[i] * avg);
     capHill.hourlySales.push(saleHour);
+    capHill.total += saleHour;
   };
 };
 capHill.calculateHourlySales(capHill.hourlyCust, capHill.avg);
@@ -131,9 +148,12 @@ capHill.listHours = function () {
   var capHillInfo = document.getElementById('capHillInfo');
   for (var i = 0; i < capHill.hourlyCust.length; i++) {
     var listItem = document.createElement('li');
-    listItem.textContent = hours[i] + ' Customers - ' + capHill.hourlyCust[i] + ' Sales - ' + capHill.hourlySales[i];
+    listItem.textContent = hours[i] + ' Sales - ' + capHill.hourlySales[i];
     capHillInfo.appendChild(listItem);
   };
+  var total = document.createElement('ul');
+  total.textContent = 'Total - ' + capHill.total;
+  capHillInfo.appendChild(total);
 };
 capHill.listHours();
 
@@ -142,7 +162,8 @@ var alki = {
   max: 16,
   avg: 4.6,
   hourlyCust: [],
-  hourlySales: []
+  hourlySales: [],
+  total: 0
 };
 
 alki.generateRandomNum = function (min, max) {
@@ -157,6 +178,7 @@ alki.calculateHourlySales = function (hourlyCust, avg) {
   for (var i = 0; i < hourlyCust.length; i++) {
     var saleHour = Math.floor(hourlyCust[i] * avg);
     alki.hourlySales.push(saleHour);
+    alki.total += saleHour;
   };
 };
 alki.calculateHourlySales(alki.hourlyCust, alki.avg);
@@ -165,8 +187,11 @@ alki.listHours = function () {
   var alkiInfo = document.getElementById('alkiInfo');
   for (var i = 0; i < alki.hourlyCust.length; i++) {
     var listItem = document.createElement('li');
-    listItem.textContent = hours[i] + ' Customers - ' + alki.hourlyCust[i] + ' Sales - ' + alki.hourlySales[i];
+    listItem.textContent = hours[i] + ' Sales - ' + alki.hourlySales[i];
     alkiInfo.appendChild(listItem);
   };
+  var total = document.createElement('ul');
+  total.textContent = 'Total - ' + alki.total;
+  alkiInfo.appendChild(total);
 };
 alki.listHours();
