@@ -1,6 +1,6 @@
 'use strict';
 
-var hours = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:', '8pm:'];
+var hours = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
 
 function Store(locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust) {
   this.locationName = locationName;
@@ -41,18 +41,6 @@ seatac.calcCookiesEachHourArray();
 center.calcCookiesEachHourArray();
 capHill.calcCookiesEachHourArray();
 alki.calcCookiesEachHourArray();
-
-// Store.prototype.listHours = function() {
-//   var locationInfo = document.getElementById('locationInfo');
-//   for (var i = 0; i < this.custEachHourArray.length; i++) {
-//     var listItem = document.createElement('table');
-//     listItem.textContent = hours[i] + ' Sales - ' + this.cookiesEachHourArray[i];
-//     locationInfo.appendChild(listItem);
-//   };
-//   var totalDailyCookieSales = document.createElement('table');
-//   totalDailyCookieSales.textContent = 'Total - ' + this.totalDailyCookieSales;
-//   locationInfo.appendChild(totalDailyCookieSales);
-// };
 
 var renderTableHeader = function() {
   var headerTitles = [' ', 'Daily Location Total'];
