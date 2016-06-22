@@ -22,8 +22,6 @@ var alki = new Store('Alki', 2, 16, 4.6);
 Store.prototype.calcCustEachHour = function() {
   for (var i = 0; i < hours.length; i++) {
     var custEachHour = Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1)) + this.minCustPerHour;
-    console.log(custEachHour);
-    console.log(this.minCustPerHour);
     this.custEachHourArray.push(custEachHour);
   };
 };
