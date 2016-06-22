@@ -4,33 +4,40 @@
 }
 
 .picture {
-  width: 100%;
+  width: 50%;
+}
+
+img {
+  border-radius: 50px;
 }
 
 section {
   float: left;
-  padding: 30px;
+  padding: 0px, 30px;
 }
 
-li {
+table {
   color: #F2A38A;
   font-family: Helvetica;
+  font-size: 28px;
   background-color: rgba(20, 8, 0, 0.5);
   padding: 10px;
   border-radius: 10px;
-}
-
-ul {
-  color: #111;
-  font-family: Helvetica;
-  padding-top: 10px;
+  margin-bottom: 50px;
 }
 
 h1 {
   color: #483029;
   font-family: 'Courgette', cursive;
+  font-size: 80px;
+  display: inline-block;
+  width: 50%;
+  padding-left: 70px;
+  text-align: right;
 }
 
 h2 {
   color: #CB5405;
+  width: 100%;
+  font-size: 40px;
 }
