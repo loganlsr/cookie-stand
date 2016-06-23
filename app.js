@@ -1,6 +1,6 @@
 'use strict';
 
-var hours = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
+var hours = ['6AM - 7AM:', '7AM - 8AM:', '8AM - 9AM:', '9AM - 10AM:', '10AM - 11AM:', '11AM - 12PM:', '12PM - 1PM:', '1PM - 2PM:', '2PM - 3PM:', '3PM - 4PM:', '4PM - 5PM:', '5PM - 6PM:', '6PM - 7PM:', '7PM - 8PM:'];
 var openLocations = [];
 var totalsRow = [];
 
@@ -38,7 +38,7 @@ Store.prototype.calcCookiesEachHourArray = function() {
 };
 
 var renderTableHeader = function() {
-  var headerTitles = [' ', 'Daily Location Total'];
+  var headerTitles = ['Locations!', 'Daily Location Total'];
   var locationInfo = document.getElementById('locationInfo');
   var trEl = document.createElement('tr');
   for(var i = 0; i < headerTitles.length; i++) {
@@ -93,9 +93,9 @@ function renderTotals() {
   var tableEl = document.getElementById('locationInfo');
   var trEl = document.createElement('tr');
   for(var i = 0; i < totalsRow.length; i++) {
-    var thEl = document.createElement('th');
-    thEl.textContent = totalsRow[i];
-    trEl.appendChild(thEl);
+    var tdEl = document.createElement('td');
+    tdEl.textContent = totalsRow[i];
+    trEl.appendChild(tdEl);
   }
   tableEl.appendChild(trEl);
 }
