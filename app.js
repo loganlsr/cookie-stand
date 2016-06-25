@@ -96,6 +96,7 @@ function renderTotals() {
     var tdEl = document.createElement('td');
     tdEl.textContent = totalsRow[i];
     trEl.appendChild(tdEl);
+    // buildElement('td', totalsRow[i], tdEl);
   }
   tableEl.appendChild(trEl);
 }
@@ -129,3 +130,9 @@ myForm.addEventListener('submit', function(event) {
   };
   renderTotals();
 });
+
+function buildElement(kind, content, where) {
+  var x = document.getElementById('kind');
+  x.textContent = content;
+  where.appendChild(x);
+};
